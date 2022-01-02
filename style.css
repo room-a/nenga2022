@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* CSS Document */
+/* 共通部分
+------------------------------- */
+html {
+  font-size: 62.5%; /*1remで10pxになる */
+  overflow-y:scroll;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.9;
+  color: #333;
+  text-align: justify;
+  font-size: 1.5em;
+  font-feature-settings: "pkna"1;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+  pointer-events: none;
+}
+ul {
+  list-style: none;
+}
+.pc {
+  display: block !important;
+}
+.sp {
+  display: none !important;
+}
+p, li {
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.undameshi{
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+@keyframes fadein{
+    from{
+    opacity: 0;
+    transform: translatesy(20px);
+    }
+    to{
+    opacity: 1;
+    transform: translatey(0);
+    }
+}
+
+
+/* ここから
+------------------------------- */
+
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc {
+  display: block !important;
+}
+.sp {
+  display: none !important;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10%;
+  text-align: center;
+  background: #d7af3b;
+  background-image: linear-gradient(45deg, #d1a525 25%, transparent 0), linear-gradient(45deg, transparent 75%, #d1a525 0), linear-gradient(45deg, #d1a525 25%, transparent 0), linear-gradient(45deg, transparent 75%, #d1a525 0);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px, 30px 30px, 60px 60px;
+}
+header {
+  background-color: #c71d1d;
+  height: 30px;
+}
+h1.title {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+h2 {
+  max-width: 900px;
+  margin: 0 auto 90px;
+  padding: 1rem 2rem;
+  border-top: 5px dotted #0A6513;
+  border-bottom: 5px dotted #0A6513;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+.shuffle2 {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.btn_item button {
+  display: inline-block;
+  width: 400px;
+  margin: 60px 0;
+  padding: 0.5em 1em;
+  background: #c71d1d;
+  color: #fff;
+  border-bottom: solid 12px #a71616;
+  border-radius: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+}
+.btn_item:active button {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(8px); /*下に動く*/
+  border-bottom: none; /*線を消す*/
+}
+
+h3{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 0 30px 0;
+}
+
+
+footer {
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+    
+  .wrapper {
+    padding: 0 3%;
+  }
+  header {
+    background-color: #c71d1d;
+    height: 20px;
+  }
+  h1.title {
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  h2 {
+    margin: 0 auto 40px;
+    padding: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 2px;
+  }
+  .shuffle2 {
+    max-width: 300px;
+  }
+  .btn_item button {
+    display: inline-block;
+    min-width:100px;
+    width: 60%;
+    margin: 40px 0;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    letter-spacing: 8px;
+   }
+    
+  .btn_item:active button {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(8px); /*下に動く*/
+    border-bottom: none; /*線を消す*/
+  }
+    
+    button{
+         display: block;
+    }
+  footer {
+    height: 30px;
+    font-size: 1rem;
+  }
+}
