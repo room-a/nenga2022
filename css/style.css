@@ -4,7 +4,9 @@
 ------------------------------- */
 html {
   font-size: 62.5%; /*1remで10pxになる */
+  overflow-y:scroll;
 }
+
 body {
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.9;
@@ -43,10 +45,12 @@ p, li {
   padding: 0;
 }
 
+
 .undameshi{
     animation-name: fadein;
     animation-duration: 3s;
 }
+
 @keyframes fadein{
     from{
     opacity: 0;
@@ -57,6 +61,7 @@ p, li {
     transform: translatey(0);
     }
 }
+
 
 /* ここから
 ------------------------------- */
@@ -104,6 +109,8 @@ h2 {
   max-width: 600px;
   margin: 0 auto;
 }
+
+
 .btn_item button {
   display: inline-block;
   width: 400px;
@@ -177,13 +184,18 @@ footer {
     padding: 0.5em 1em;
     font-size: 2rem;
     letter-spacing: 8px;
-  }
+   }
+    
   .btn_item:active button {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
     transform: translateY(8px); /*下に動く*/
     border-bottom: none; /*線を消す*/
   }
+    
+    button{
+         display: block;
+    }
   footer {
     height: 30px;
     font-size: 1rem;
